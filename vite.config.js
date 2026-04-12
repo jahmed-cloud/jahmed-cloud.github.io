@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // <-- Change this from './' to '/'
+  base: './', // <-- The dot makes the paths relative!
 })
