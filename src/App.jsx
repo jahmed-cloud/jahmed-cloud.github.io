@@ -169,7 +169,7 @@ export default function App() {
         <section id="hobbies" className="py-20 md:py-32 border-t border-white/10">
           <FadeIn>
             <div className="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-12 relative overflow-hidden">
-              <Compass className="text-white/5 absolute -right-10 -bottom-10" size={180} className="md:w-[250px] md:h-[250px]" />
+              <Compass className="text-white/5 absolute -right-10 -bottom-10 md:w-[250px] md:h-[250px]" size={180} />
               <div className="relative z-10 max-w-2xl">
                 <h2 className="text-2xl md:text-4xl font-medium tracking-tight mb-4 md:mb-6">Beyond the Screen.</h2>
                 <p className="text-base md:text-lg text-gray-400 font-light leading-relaxed mb-4 md:mb-6">When I am not architecting cloud security solutions, you will likely find me on two wheels. I own a Royal Enfield Himalayan 450 and a KTM 390 Adventure, and actively ride with my local motorcycle club.</p>
