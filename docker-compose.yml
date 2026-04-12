@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  portfolio:
+    build: .
+    container_name: react-portfolio
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      # Users can fill these out to override the GitHub Pages defaults!
+      - USER_NAME=Junaid Ahmed
+      - USER_TAGLINE=Cloud Security & Identity Architect
+      - LINKEDIN_URL=https://linkedin.com/in/yourprofile
+      - GITHUB_URL=https://github.com/yourusername
+      - EMAIL_ADDRESS=mailto:junaid@example.com
+      - BLOG_URL=https://learncloud.guru
