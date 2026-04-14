@@ -9,9 +9,9 @@ const DEFAULT_DATA = {
   name: "Junaid Ahmed",
   tagline: "Cloud Security & Identity Architect",
   links: {
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
-    email: "mailto:junaid@example.com",
+    linkedin: "https://linkedin.com/in/iamjahmed",
+    github: "https://github.com/jahmed-cloud",
+    email: "mailto:iam@jahmed.cloud",
     blog: "https://learncloud.guru",
     resume: "/resume.pdf"
   }
@@ -36,11 +36,13 @@ const PROFILE = {
 const MY_EXPERTISE = ["Azure Security", "Identity & Access (Entra ID)", "Zero Trust Architecture", "Terraform & PowerShell", "DevSecOps", "Python"];
 const MY_CERTIFICATIONS = [
   { name: "CISM (Certified Information Security Manager)", issuer: "ISACA" },
+  { name: "Microsoft Certified Trainer (MCT)", issuer: "Microsoft" },
   { name: "Cybersecurity Architect Expert (SC-100)", issuer: "Microsoft" },
   { name: "Azure Solutions Architect Expert (AZ-305)", issuer: "Microsoft" },
   { name: "Identity & Access Administrator (SC-300)", issuer: "Microsoft" },
-  { name: "Microsoft Certified Trainer (MCT)", issuer: "Microsoft" },
-  { name: "Professional Cloud Security Engineer", issuer: "Google Cloud" }
+  { name: "Security, Compliance, and Identity Fundamentals (SC-900)", issuer: "Microsoft" },
+  { name: "Azure Administrator (AZ-105)", issuer: "Microsoft" },
+  { name: "Azure Fundamentals (AZ-900)", issuer: "Microsoft" }
 ];
 const MY_EXPERIENCE = [
   { role: "Technology Manager", company: "EY", period: "Present", description: "Leading technology initiatives and architecting robust security frameworks for enterprise clients." },
