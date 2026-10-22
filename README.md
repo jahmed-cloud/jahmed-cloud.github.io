@@ -14,6 +14,7 @@ This project utilizes a **Smart Hybrid Architecture**:
 * **Frontend:** React 18, Vite, Tailwind CSS, Framer Motion (for animations), Lucide React (for icons).
 * **Containerization:** Docker, Docker Compose, Nginx (Alpine).
 * **CI/CD:** GitHub Actions (Automated GitHub Pages deployment).
+* **SEO:** `npm run build` pre-renders the page into `dist/index.html` (`src/entry-server.jsx` + `scripts/prerender.js`), so search engines and AI crawlers that don't run JavaScript still see the full content. `public/` also ships `robots.txt`, `sitemap.xml`, `llms.txt` and the social preview image `og-image.png`; update the URLs in those files and in `index.html` if you use your own domain.
 
 ---
 

@@ -1,0 +1,82 @@
+<svg width="700" height="620" viewBox="0 0 700 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Policy-as-code architecture">
+<title>Policy-as-code architecture</title>
+<style>
+  .bx { stroke-width: 1; rx: 8; }
+  .t  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 14px; font-weight: 500; }
+  .s  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; }
+  .h  { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 13px; font-weight: 500; }
+  /* Portfolio copy: dark palette only, to match the site */
+  .arr { stroke: #9c9a92; stroke-width: 1.5; fill: none; } .lbl { fill: #9c9a92; }
+  .teal-f { fill: #085041; stroke: #5DCAA5; } .teal-t { fill: #9FE1CB; } .teal-s { fill: #5DCAA5; }
+  .gray-f { fill: #444441; stroke: #B4B2A9; } .gray-t { fill: #D3D1C7; } .gray-s { fill: #B4B2A9; }
+  .purp-f { fill: #3C3489; stroke: #AFA9EC; } .purp-t { fill: #CECBF6; } .purp-s { fill: #AFA9EC; }
+  .amb-f  { fill: #633806; stroke: #EF9F27; } .amb-t  { fill: #FAC775; } .amb-s  { fill: #EF9F27; }
+  .blue-f { fill: #0C447C; stroke: #85B7EB; } .blue-t { fill: #B5D4F4; } .blue-s { fill: #85B7EB; }
+  .cor-f  { fill: #712B13; stroke: #F0997B; } .cor-t  { fill: #F5C4B3; } .cor-s  { fill: #F0997B; }
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<text class="h lbl" x="40" y="30">You edit these two</text>
+
+<rect class="bx teal-f" x="40" y="44" width="240" height="58"/>
+<text class="t teal-t" x="160" y="70" text-anchor="middle">Custom definitions</text>
+<text class="s teal-s" x="160" y="89" text-anchor="middle">policies/definitions/&lt;Category&gt;/</text>
+
+<rect class="bx gray-f" x="310" y="44" width="240" height="58"/>
+<text class="t gray-t" x="430" y="70" text-anchor="middle">Built-in policies</text>
+<text class="s gray-s" x="430" y="89" text-anchor="middle">In Azure. No files here.</text>
+
+<line class="arr" x1="160" y1="102" x2="240" y2="146" marker-end="url(#a)"/>
+<line class="arr" x1="430" y1="102" x2="350" y2="146" marker-end="url(#a)"/>
+
+<rect class="bx purp-f" x="155" y="150" width="280" height="76"/>
+<text class="t purp-t" x="295" y="174" text-anchor="middle">Initiative file</text>
+<text class="s purp-s" x="295" y="193" text-anchor="middle">policies · scopes · mode</text>
+<text class="s purp-s" x="295" y="211" text-anchor="middle">policy_exemptions</text>
+
+<rect class="bx purp-f" x="465" y="150" width="195" height="76"/>
+<text class="t purp-t" x="562" y="174" text-anchor="middle">globals.auto.tfvars</text>
+<text class="s purp-s" x="562" y="193" text-anchor="middle">Tenant, management</text>
+<text class="s purp-s" x="562" y="211" text-anchor="middle">group, shared values</text>
+
+<line class="arr" x1="465" y1="188" x2="441" y2="188" marker-end="url(#a)"/>
+<line class="arr" x1="295" y1="226" x2="295" y2="264" marker-end="url(#a)"/>
+
+<rect class="bx gray-f" x="155" y="268" width="280" height="58"/>
+<text class="t gray-t" x="295" y="294" text-anchor="middle">Terraform engine</text>
+<text class="s gray-s" x="295" y="313" text-anchor="middle">tf-policy/*.tf — never edited</text>
+
+<rect class="bx amb-f" x="465" y="268" width="195" height="58"/>
+<text class="t amb-t" x="562" y="294" text-anchor="middle">Local checks</text>
+<text class="s amb-s" x="562" y="313" text-anchor="middle">make check</text>
+
+<line class="arr" x1="465" y1="297" x2="441" y2="297" marker-end="url(#a)"/>
+<line class="arr" x1="295" y1="326" x2="295" y2="364" marker-end="url(#a)"/>
+
+<rect class="bx amb-f" x="155" y="368" width="280" height="76"/>
+<text class="t amb-t" x="295" y="392" text-anchor="middle">Pipeline</text>
+<text class="s amb-s" x="295" y="411" text-anchor="middle">Validate → plan → approve</text>
+<text class="s amb-s" x="295" y="429" text-anchor="middle">→ apply saved plan</text>
+
+<line class="arr" x1="295" y1="444" x2="295" y2="482" marker-end="url(#a)"/>
+
+<text class="h lbl" x="40" y="476">Azure creates these four</text>
+
+<rect x="40" y="486" width="620" height="100" rx="12" fill="none" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="4 3"/>
+
+<rect class="bx blue-f" x="62" y="508" width="135" height="56"/>
+<text class="t blue-t" x="129" y="532" text-anchor="middle">Definitions</text>
+<text class="s blue-s" x="129" y="550" text-anchor="middle">The rules</text>
+
+<rect class="bx blue-f" x="212" y="508" width="135" height="56"/>
+<text class="t blue-t" x="279" y="532" text-anchor="middle">Initiatives</text>
+<text class="s blue-s" x="279" y="550" text-anchor="middle">The bundles</text>
+
+<rect class="bx blue-f" x="362" y="508" width="135" height="56"/>
+<text class="t blue-t" x="429" y="532" text-anchor="middle">Assignments</text>
+<text class="s blue-s" x="429" y="550" text-anchor="middle">Where it applies</text>
+
+<rect class="bx cor-f" x="512" y="508" width="126" height="56"/>
+<text class="t cor-t" x="575" y="532" text-anchor="middle">Exemptions</text>
+<text class="s cor-s" x="575" y="550" text-anchor="middle">Time-bound</text>
+</svg>

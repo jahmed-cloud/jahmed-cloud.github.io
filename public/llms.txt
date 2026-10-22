@@ -1,0 +1,35 @@
+# Junaid Ahmed (jahmed) — jahmed.cloud
+
+> Cloud Security & Identity Architect based in Bengaluru, India, with 10+ years in Microsoft Entra ID, Zero Trust, Privileged Access Workstations (PAW), identity governance and Azure governance. Technology Manager — Cloud Security & Identity at Ernst & Young (EY). Certified SC-100, AZ-305, CISM, SC-300, AZ-104 and Microsoft Certified Trainer (MCT).
+
+## Profile
+
+- [Portfolio](https://jahmed.cloud/): experience, certifications and projects
+- [LinkedIn](https://linkedin.com/in/iamjahmed)
+- [GitHub](https://github.com/jahmed-cloud)
+- [Blog — learncloud.guru](https://learncloud.guru)
+
+## Expertise
+
+Entra ID and identity governance, Zero Trust architecture, Privileged Access Workstations (physical and Azure Virtual Desktop), PIM/JIT and Conditional Access, passwordless (FIDO2, Windows Hello for Business), Azure Landing Zones and Azure Policy, Azure Virtual Desktop, Terraform and policy as code, PowerShell and Python automation, FinOps and cost governance.
+
+## Experience
+
+- Ernst & Young (EY) — Technology Manager, Cloud Security & Identity (May 2025 – present)
+- Concentrix (Microsoft Partner) — Senior Consultant, Identity & Security (Aug 2023 – May 2025)
+- Allyis (Microsoft Partner) — Lead Consultant, Cloud & Identity (Jun 2021 – Aug 2023)
+- Convergys (Microsoft Partner) — Senior Azure Engineer (Jan 2017 – Jun 2021)
+- Lenovo — Technical Support Specialist (May 2015 – Aug 2016)
+
+## Projects
+
+- [EntraGuard](https://github.com/jahmed-cloud/entra-guard): Identity Security Posture Management for Microsoft Entra ID — 115 checks across 12 domains, mapped to NIST CSF, CIS Azure v2 and ISO 27001
+- [Azure Resource Guardian (ARG)](https://github.com/jahmed-cloud/ARG): self-hosted Azure governance platform — 76 scanners for orphaned resources, cost savings, Azure Policy effectiveness, Entra ID hygiene and Terraform drift
+- [AZPaC — Azure Policy as Code](https://github.com/jahmed-cloud/AZPaC): Terraform framework for Azure Policy definitions, initiatives, assignments and time-bound exemptions through pull requests
+- Guardian365: self-hosted, multi-tenant Microsoft 365 security monitoring platform (in development)
+- Entra MFA & TAP Portal: approval-driven MFA reset and Temporary Access Pass portal for Entra ID (in development)
+- Privileged Access Workstations as code: PAW baselines for Entra ID and Intune, delivered for enterprise clients
+- [Entra Helpdesk Portal](https://github.com/jahmed-cloud/entra-helpdesk): Zero Trust helpdesk portal for Entra ID with mandatory ticket numbers and audit logging
+- [Entra ID Environment Teardown](https://github.com/jahmed-cloud/Entra-ID-Environment-Teardown): safe, auditable CI/CD pipeline to reset an Entra ID tenant
+- [OpenPrint Server](https://github.com/jahmed-cloud/OpenPrint-Server): Docker-based CUPS print server with an admin dashboard
+- CloudSkills: Azure architecture and FinOps review toolkit with an MCP server and CLI
