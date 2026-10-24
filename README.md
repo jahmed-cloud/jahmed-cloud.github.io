@@ -11,7 +11,7 @@ This project utilizes a **Smart Hybrid Architecture**:
 ---
 
 ## 🏗️ Architecture & Tech Stack
-* **Frontend:** React 18, Vite, Tailwind CSS, Framer Motion (for animations), Lucide React (for icons).
+* **Frontend:** React 18, Vite, Tailwind CSS, Lucide React (for icons). Light and dark mode follow the visitor's system setting, with a toggle in the nav that remembers their choice; theme colours live as CSS variables in `src/index.css`.
 * **Containerization:** Docker, Docker Compose, Nginx (Alpine).
 * **CI/CD:** GitHub Actions (Automated GitHub Pages deployment).
 * **SEO:** `npm run build` pre-renders the page into `dist/index.html` (`src/entry-server.jsx` + `scripts/prerender.js`), so search engines and AI crawlers that don't run JavaScript still see the full content. `public/` also ships `robots.txt`, `sitemap.xml`, `llms.txt` and the social preview image `og-image.png`; update the URLs in those files and in `index.html` if you use your own domain.
@@ -46,9 +46,9 @@ Download all the required React packages:
 npm install
 ```
 
-### Step 3: Edit the Core Data (`src/App.jsx`)
+### Step 3: Edit the Core Data (`src/portfolio-data.js`)
 
-To add your complex data arrays, open `src/App.jsx` in your code editor. Locate the data arrays at the top of the file and replace them with your own history.
+To add your complex data arrays, open `src/portfolio-data.js` in your code editor. Locate the data arrays at the top of the file and replace them with your own history.
 
 ### Step 4: Test Your Changes Locally
 

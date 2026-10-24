@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Light theme (default): cool slate with a teal accent */
+:root {
+  --bg: 248 250 252;
+  --surface: 255 255 255;
+  --fg: 15 23 42;
+  --muted: 71 85 105;
+  --subtle: 100 116 139;
+  --line: 226 232 240;
+  --accent: 15 118 110;
+  --glow: 20 184 166;
+  --glow-alpha: 0.10;
+  color-scheme: light;
+}
+
+/* Dark theme: deep navy. The class is set by the script in index.html and the toggle. */
+.dark {
+  --bg: 11 18 32;
+  --surface: 22 32 50;
+  --fg: 226 232 240;
+  --muted: 148 163 184;
+  --subtle: 125 140 163;
+  --line: 34 46 66;
+  --accent: 94 234 212;
+  --glow: 29 78 216;
+  --glow-alpha: 0.16;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: rgb(var(--accent) / 0.25); }
+
+/* Mouse-following light, positioned by App.jsx through --x / --y */
+.spotlight {
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 20%), rgb(var(--glow) / var(--glow-alpha)), transparent 80%);
+}
+
+/* Hide the native disclosure triangle; a chevron icon is used instead */
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+
+/* Scroll progress bar: hidden unless the browser supports scroll-driven animations */
+.scroll-progress { transform: scaleX(0); transform-origin: 0 50%; }
+
+/* Theme switch: App.jsx animates a growing circle, so turn off the default crossfade */
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+/* All motion below is skipped for visitors who ask their system for reduced motion.
+   Reveal/entrance use the `translate` property, not `transform`, so they don't fight hover effects. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Scroll reveal. Only active when JavaScript runs (.js on <html>), so crawlers and
+     no-JS visitors always see the content. --stagger delays items in a row. */
+  .js .reveal {
+    opacity: 0;
+    translate: 0 14px;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), translate 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: calc(var(--stagger, 0) * 80ms);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  /* Entrance of the pinned identity column on load; --i sets the order. Pure CSS, so it
+     completes even if JavaScript fails. */
+  .js .enter {
+    animation: enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--i, 0) * 80ms + 60ms);
+  }
+  @keyframes enter {
+    from { opacity: 0; translate: 0 16px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress {
+      animation: progress linear both;
+      animation-timeline: scroll(root);
+    }
+    @keyframes progress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+  }
+}
