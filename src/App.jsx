@@ -265,7 +265,7 @@ export default function App() {
           <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[min(900px,130vw)] -translate-x-1/2 rounded-full bg-accent/15 blur-3xl" />
 
           <div className="mx-auto max-w-6xl px-4 pb-20 pt-24 md:px-6 md:pb-28 md:pt-32">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
               <div className={`${tile} enter flex flex-col justify-between p-7 sm:col-span-2 md:p-10 lg:col-span-7`} style={{ '--i': 0 }}>
                 <div>
                   {AVAILABILITY && (
