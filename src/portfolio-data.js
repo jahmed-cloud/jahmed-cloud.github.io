@@ -161,6 +161,30 @@ export const FEATURED_PROJECTS = [
   }
 ];
 
+// One-line positioning shown at the top of the page
+export const POSITIONING = "I make sure the right people, and only the right people, can reach your cloud.";
+
+// What I'm building right now (shown in the hero grid)
+export const NOW_BUILDING = { title: "Guardian365", note: "Self-hosted security monitoring for Microsoft 365" };
+
+// The problem each flagship project solves, shown before what it does
+export const PROJECT_PROBLEMS = {
+  "EntraGuard": "Entra ID tenants drift: stale guests, weak Conditional Access, standing admin roles. Finding them by hand takes days.",
+  "Azure Resource Guardian": "Azure estates collect idle resources, unowned costs and Azure Policy blind spots that nobody is looking at.",
+  "AZPaC": "Azure Policy managed in the portal has no review, no history, and exemptions that quietly last for years.",
+  "Guardian365": "Microsoft 365 security signals are spread across half a dozen admin portals, so incidents are spotted late.",
+  "Entra MFA & TAP Portal": "Helpdesk MFA resets are a favourite target for social engineering, and are often done with too much access.",
+  "Privileged Access Workstations as Code": "Admins doing privileged work from the same laptop they use for email and browsing."
+};
+
+// How I work - each principle points to where it shows up in my work
+export const PRINCIPLES = [
+  { title: "Least privilege, by default", text: "Standing admin access is a liability. Roles are eligible, not active; elevation is just-in-time; privileged work happens on hardened devices.", seenIn: ["PIM / JIT at EY", "PAW as code"] },
+  { title: "Policy is code, and code gets reviewed", text: "Conditional Access, RBAC and Azure Policy change through pull requests, with history, review and rollback.", seenIn: ["AZPaC", "Terraform RBAC"] },
+  { title: "Audit before you enforce", text: "Measure first. The list of things that fail is the list of work to do before switching enforcement on.", seenIn: ["AZPaC", "EntraGuard"] },
+  { title: "Exceptions expire", text: "Every exemption has an owner and an end date, so a temporary exception can't quietly become permanent.", seenIn: ["AZPaC", "EntraGuard"] }
+];
+
 // Smaller tools & utilities - compact list
 export const MORE_PROJECTS = [
   { title: "CloudSkills", description: "Azure architecture and FinOps reviews from an MCP server or CLI, exported as HTML, JSON and Mermaid reports.", icon: Bot, tone: "pink", tech: ["Node.js", "MCP", "Resource Graph"], link: "" },

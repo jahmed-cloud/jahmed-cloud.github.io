@@ -7,7 +7,10 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+      fontFamily: {
+        sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+      },
       colors: {
         bg: token('bg'),
         surface: token('surface'),
@@ -16,6 +19,7 @@ export default {
         subtle: token('subtle'),
         line: token('line'),
         accent: token('accent'),
+        ok: token('ok'),
       },
     },
   },

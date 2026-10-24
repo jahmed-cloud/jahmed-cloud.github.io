@@ -2,40 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light theme (default): cool slate with a teal accent */
+/* Light theme (default): neutral zinc, Azure-blue accent, green for "granted" states */
 :root {
-  --bg: 248 250 252;
+  --bg: 250 250 250;
   --surface: 255 255 255;
-  --fg: 15 23 42;
-  --muted: 71 85 105;
-  --subtle: 100 116 139;
-  --line: 226 232 240;
-  --accent: 15 118 110;
-  --glow: 20 184 166;
-  --glow-alpha: 0.10;
+  --fg: 9 9 11;
+  --muted: 82 82 91;
+  --subtle: 113 113 122;
+  --line: 228 228 231;
+  --accent: 37 99 235;
+  --ok: 4 120 87;
   color-scheme: light;
 }
 
-/* Dark theme: deep navy. The class is set by the script in index.html and the toggle. */
+/* Dark theme. The class is set by the script in index.html and the toggle. */
 .dark {
-  --bg: 11 18 32;
-  --surface: 22 32 50;
-  --fg: 226 232 240;
-  --muted: 148 163 184;
-  --subtle: 125 140 163;
-  --line: 34 46 66;
-  --accent: 94 234 212;
-  --glow: 29 78 216;
-  --glow-alpha: 0.16;
+  --bg: 9 9 11;
+  --surface: 24 24 27;
+  --fg: 250 250 250;
+  --muted: 161 161 170;
+  --subtle: 140 140 150;
+  --line: 39 39 42;
+  --accent: 96 165 250;
+  --ok: 52 211 153;
   color-scheme: dark;
 }
 
 html { scroll-behavior: smooth; }
 ::selection { background: rgb(var(--accent) / 0.25); }
 
-/* Mouse-following light, positioned by App.jsx through --x / --y */
-.spotlight {
-  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 20%), rgb(var(--glow) / var(--glow-alpha)), transparent 80%);
+/* Faint dot grid behind the hero, fading out towards the bottom */
+.dot-grid {
+  background-image: radial-gradient(rgb(var(--fg) / 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
 }
 
 /* Hide the native disclosure triangle; a chevron icon is used instead */
